@@ -27,9 +27,9 @@ kc = 1/2*N*k0;
 
 ddir = '../../Verification/Turbulence/';
 
-uvw_file1 = [ddir,chid,'_uvw_001.csv'];
-uvw_file2 = [ddir,chid,'_uvw_002.csv'];
-uvw_file3 = [ddir,chid,'_uvw_003.csv'];
+uvw_file1 = [ddir,chid,'_uvw_1.csv'];
+uvw_file2 = [ddir,chid,'_uvw_2.csv'];
+uvw_file3 = [ddir,chid,'_uvw_3.csv'];
 
 skip_case = 0;
 if ~exist(uvw_file1)
@@ -136,6 +136,7 @@ addverstr(gca,Git_Filename,'loglog')
 % print to pdf
 set(gcf,'Visible',Figure_Visibility);
 set(gcf,'Units',Paper_Units);
+set(gcf,'PaperUnits',Paper_Units);
 set(gcf,'PaperSize',[Paper_Width Paper_Height]);
 set(gcf,'Position',[0 0 Paper_Width Paper_Height]);
 print(gcf,'-dpdf',['../../Manuals/FDS_Verification_Guide/SCRIPT_FIGURES/',chid,'_spectra'])
